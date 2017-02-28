@@ -1,0 +1,11 @@
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\bin\Debug\MovieBonanza.exe.config
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\bin\Debug\MovieBonanza.exe
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\bin\Debug\MovieBonanza.pdb
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.csprojResolveAssemblyReference.cache
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.Properties.Resources.resources
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.csproj.GenerateResource.Cache
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.exe
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.pdb
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.SplachScreenForm.resources
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.SplashForm.resources
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment03\MovieBonanza\MovieBonanza\obj\Debug\MovieBonanza.OrderForm.resources
