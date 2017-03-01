@@ -28,14 +28,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.labelContactNumber = new System.Windows.Forms.Label();
+            this.labelWebsite = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelStudentName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
-            this.labelWebsite = new System.Windows.Forms.Label();
-            this.labelContactNumber = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,30 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(624, 407);
             this.tableLayoutPanel.TabIndex = 0;
+            // 
+            // labelContactNumber
+            // 
+            this.labelContactNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelContactNumber.Location = new System.Drawing.Point(9, 200);
+            this.labelContactNumber.Margin = new System.Windows.Forms.Padding(9, 0, 4, 0);
+            this.labelContactNumber.MaximumSize = new System.Drawing.Size(0, 26);
+            this.labelContactNumber.Name = "labelContactNumber";
+            this.labelContactNumber.Size = new System.Drawing.Size(611, 26);
+            this.labelContactNumber.TabIndex = 26;
+            this.labelContactNumber.Text = "Contact Number";
+            this.labelContactNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelWebsite
+            // 
+            this.labelWebsite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelWebsite.Location = new System.Drawing.Point(9, 160);
+            this.labelWebsite.Margin = new System.Windows.Forms.Padding(9, 0, 4, 0);
+            this.labelWebsite.MaximumSize = new System.Drawing.Size(0, 26);
+            this.labelWebsite.Name = "labelWebsite";
+            this.labelWebsite.Size = new System.Drawing.Size(611, 26);
+            this.labelWebsite.TabIndex = 25;
+            this.labelWebsite.Text = "Web Site";
+            this.labelWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelProductName
             // 
@@ -140,30 +164,6 @@
             this.okButton.Size = new System.Drawing.Size(112, 34);
             this.okButton.TabIndex = 24;
             this.okButton.Text = "&OK";
-            // 
-            // labelWebsite
-            // 
-            this.labelWebsite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelWebsite.Location = new System.Drawing.Point(9, 160);
-            this.labelWebsite.Margin = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.labelWebsite.MaximumSize = new System.Drawing.Size(0, 26);
-            this.labelWebsite.Name = "labelWebsite";
-            this.labelWebsite.Size = new System.Drawing.Size(611, 26);
-            this.labelWebsite.TabIndex = 25;
-            this.labelWebsite.Text = "Web Site";
-            this.labelWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelContactNumber
-            // 
-            this.labelContactNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelContactNumber.Location = new System.Drawing.Point(9, 200);
-            this.labelContactNumber.Margin = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.labelContactNumber.MaximumSize = new System.Drawing.Size(0, 26);
-            this.labelContactNumber.Name = "labelContactNumber";
-            this.labelContactNumber.Size = new System.Drawing.Size(611, 26);
-            this.labelContactNumber.TabIndex = 26;
-            this.labelContactNumber.Text = "Contact Number";
-            this.labelContactNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AboutBox
             // 

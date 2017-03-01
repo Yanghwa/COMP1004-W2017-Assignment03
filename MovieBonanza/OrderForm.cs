@@ -1,4 +1,13 @@
-﻿using System;
+﻿//FileName: OrderForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Created On: 28/02/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows the information of selected movie including cost, image, category and title.
+//      Also shows the bigger image than selection form and calculates cost including tax and option.
+
+/////////////////////////////////////////////////////////////////////////
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,92 +16,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Reflection;
 
 namespace MovieBonanza
 {
 
     public partial class OrderForm : Form
     {
+        //PUBLIC CLASS-----------------------
         public SelectionForm previousForm;
+        
+        //PRIVATE INSTANCE VARIABLES---------------
         private double _subTotal = 0;
         private double _salesTaxRatio = 0.13;
         private double _salesTax = 0;
         private double _grandTotal = 0;
         private double DVDAdded = 0;
 
-        public double GrandTotal
-        {
-            get
-            {
-                return _grandTotal;
-            }
-        }
-
-
+        //CONSTRUCTORS-----------------------------
         public OrderForm()
         {
             InitializeComponent();
         }
+
+        //EVENT HANDELER --------------------------------
         /// <summary>
-        /// 
+        /// This method shows the stream form when you click the stream button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void StreamButton_Click(object sender, EventArgs e)
+        private void ClickStreamButton(object sender, EventArgs e)
         {
             StreamForm stream = new StreamForm();
             stream.previousForm = this;
-            stream.Initailize();
+            stream.InitailizeStreamForm();
             this.Hide();
             stream.Show();
         }
+        
         /// <summary>
-        /// 
-        /// </summary>
-        public void Initialize()
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-            TitleTextBox.Text = previousForm.MovieInformation[0];
-            CategoryTextBox.Text = previousForm.MovieInformation[1];
-            CostTextBox.Text = "$" + previousForm.MovieInformation[2];
-            BigMoviePictureBox.Image = previousForm.BigPictureImage;
-            _subTotal = double.Parse(previousForm.MovieInformation[2]) + DVDAdded;
-            _salesTax = _salesTaxRatio * _subTotal;
-            _grandTotal = _subTotal + _salesTax;
-            SubTotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", _subTotal);
-            SalesTaxTextBox.Text = "$" + string.Format("{0:#,##0.00}", _salesTax);
-            GrandTotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", _grandTotal);
-        }
-        /// <summary>
-        /// 
+        /// This method shows the selection form again when you click the back button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BackButton_Click(object sender, EventArgs e)
+        private void ClickBackButton(object sender, EventArgs e)
         {
             this.Close();
             previousForm.Show();
         }
         /// <summary>
-        /// 
+        /// This method show the about box when you click the about menu buttom on the menu
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClickAboutToolStripMenuItem(object sender, EventArgs e)
         {
             AboutBox about = new AboutBox();
             about.ShowDialog();
         }
         /// <summary>
-        /// 
+        /// This method detects if a list is clicked or not, and show the option depending on check status
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void CheckedChangedDVDCheckBox(object sender, EventArgs e)
         {
-            
             if(DVDCheckBox.Checked == true)
             {
                 DVDAdded = 10.00;
@@ -100,7 +87,6 @@ namespace MovieBonanza
                 DVDTextBox.Visible = true;
                 DVDTextBox.Text = "$" + string.Format("{0:#,##0.00}", DVDAdded);
                 Initialize();
-
             }
             else
             {
@@ -111,25 +97,25 @@ namespace MovieBonanza
             }
         }
         /// <summary>
-        /// 
+        /// This method closes the form when you click the cancel button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void ClickCancelButton(object sender, EventArgs e)
         {
             this.Close();
         }
         /// <summary>
-        /// 
+        /// This method show the brief information via message box when you click the print menu on the menu
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClickPrintToolStripMenuItem(object sender, EventArgs e)
         {
             string DVDPreview = "\nDVD: " + DVDTextBox.Text;
             if (DVDCheckBox.Checked == true)
             {
-                
+                Console.Write("DVD option is on");
             }
             else
             {
@@ -142,5 +128,33 @@ namespace MovieBonanza
                 + GrandTotalTextBox.Text, "Print Preview");
 
         }
+        //PUBLIC METHODS------------------------
+        /// <summary>
+        /// This method gets the data from selection form and shows on the form
+        /// </summary>
+        public void Initialize()
+        {
+            TitleTextBox.Text = previousForm.MovieInformation[0];
+            CategoryTextBox.Text = previousForm.MovieInformation[1];
+            CostTextBox.Text = "$" + previousForm.MovieInformation[2];
+            BigMoviePictureBox.Image = previousForm.BigPictureImage;
+            _subTotal = double.Parse(previousForm.MovieInformation[2]) + DVDAdded;
+            _salesTax = _salesTaxRatio * _subTotal;
+            _grandTotal = _subTotal + _salesTax;
+            SubTotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", _subTotal);
+            SalesTaxTextBox.Text = "$" + string.Format("{0:#,##0.00}", _salesTax);
+            GrandTotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", _grandTotal);
+        }
+        /// <summary>
+        /// This method is getter to get the value of grand total
+        /// </summary>
+        public double GrandTotal
+        {
+            get
+            {
+                return _grandTotal;
+            }
+        }
+
     }
 }

@@ -43,7 +43,7 @@
             this.OKButton.TabIndex = 5;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
-            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            this.OKButton.Click += new System.EventHandler(this.ClickOKButton);
             // 
             // ThankLabel
             // 
@@ -61,9 +61,9 @@
             this.GrandTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GrandTotalLabel.Location = new System.Drawing.Point(55, 111);
             this.GrandTotalLabel.Name = "GrandTotalLabel";
-            this.GrandTotalLabel.Size = new System.Drawing.Size(70, 26);
+            this.GrandTotalLabel.Size = new System.Drawing.Size(240, 26);
             this.GrandTotalLabel.TabIndex = 7;
-            this.GrandTotalLabel.Text = "label1";
+            this.GrandTotalLabel.Text = "Grand Total Information";
             // 
             // SelectedMovieLabel
             // 
@@ -71,9 +71,9 @@
             this.SelectedMovieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.SelectedMovieLabel.Location = new System.Drawing.Point(55, 179);
             this.SelectedMovieLabel.Name = "SelectedMovieLabel";
-            this.SelectedMovieLabel.Size = new System.Drawing.Size(70, 26);
+            this.SelectedMovieLabel.Size = new System.Drawing.Size(116, 26);
             this.SelectedMovieLabel.TabIndex = 7;
-            this.SelectedMovieLabel.Text = "label1";
+            this.SelectedMovieLabel.Text = "Movie Title";
             // 
             // StreamForm
             // 

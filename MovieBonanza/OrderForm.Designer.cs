@@ -91,7 +91,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.ClickPrintToolStripMenuItem);
             // 
             // streamToolStripMenuItem
             // 
@@ -99,7 +99,7 @@
             this.streamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.streamToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.streamToolStripMenuItem.Text = "Strea&m";
-            this.streamToolStripMenuItem.Click += new System.EventHandler(this.StreamButton_Click);
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.ClickStreamButton);
             // 
             // cancelToolStripMenuItem
             // 
@@ -107,7 +107,7 @@
             this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.cancelToolStripMenuItem.Text = "Canc&el";
-            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.ClickCancelButton);
             // 
             // helpToolStripMenuItem
             // 
@@ -124,7 +124,7 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ClickAboutToolStripMenuItem);
             // 
             // CancelButton
             // 
@@ -135,7 +135,7 @@
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this.ClickCancelButton);
             // 
             // StreamButton
             // 
@@ -146,7 +146,7 @@
             this.StreamButton.TabIndex = 2;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
-            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
+            this.StreamButton.Click += new System.EventHandler(this.ClickStreamButton);
             // 
             // MovieSelectedGroupBox
             // 
@@ -256,7 +256,7 @@
             this.DVDCheckBox.TabIndex = 8;
             this.DVDCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
             this.DVDCheckBox.UseVisualStyleBackColor = true;
-            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.DVDCheckBox_CheckedChanged);
+            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.CheckedChangedDVDCheckBox);
             // 
             // GrandTotalTextBox
             // 
@@ -351,7 +351,7 @@
             this.BackButton.TabIndex = 4;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.Click += new System.EventHandler(this.ClickBackButton);
             // 
             // BigMoviePictureBox
             // 

@@ -1,4 +1,13 @@
-﻿using System;
+﻿//FileName: SelectionForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Created On: 28/02/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows the information of selected movie including cost, image, category and title.
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +21,22 @@ namespace MovieBonanza
 {
     public partial class SelectionForm : Form
     {
+        //INSTANCE CLASS-----------------
         SplashForm splash = new SplashForm();
+        //PRIVATE INSTANCE VARIABLES-----------------
         private string[] _movieInformation = new string[4];
         private Image _bigPictureImage;
-        public string[] MovieInformation {
-            get
-            {
-                return _movieInformation;
-            }
-        }
-        public Image BigPictureImage
-        {
-            get
-            {
-                return _bigPictureImage;
-            }
-        }
+
+        //CONSTRUCTORS-------------------
         public SelectionForm()
         {
             InitializeComponent();
             splash.Show();
         }
+
+        //EVENT HANDLERS-------------------------------
         /// <summary>
-        /// 
+        /// This method hides this form first to show the logo in splash form
         /// </summary>
         /// <param name="e"></param>
         protected override void OnShown(EventArgs e)
@@ -43,7 +45,7 @@ namespace MovieBonanza
             this.Hide();
         }
         /// <summary>
-        /// 
+        /// This method sets the timer, after setting time, splash form will be hidden and shows selection form.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -54,11 +56,11 @@ namespace MovieBonanza
             this.Show();
         }
         /// <summary>
-        /// 
+        /// This method shows the order form when you click the next button. To make sure, checks again if the list is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void NextButton_Click(object sender, EventArgs e)
+        private void ClickNextButton(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(_movieInformation[0]) || string.IsNullOrEmpty(_movieInformation[1]) || string.IsNullOrEmpty(_movieInformation[2]))
             {
@@ -74,11 +76,11 @@ namespace MovieBonanza
             }
         }
         /// <summary>
-        /// 
+        /// This method detects the list is changed depending on its index, and shows the information of selected movie
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckSelectedIndexChangedMovieListBox(object sender, EventArgs e)
         {
             if(MovieListBox.SelectedIndex >= 0)
             {
@@ -96,7 +98,8 @@ namespace MovieBonanza
             }
         }
         /// <summary>
-        /// 
+        /// This method sets the category and stores to array depending on the selected movie's title
+        /// also sets the images for selection form and order form
         /// </summary>
         /// <param name="title"></param>
         private void DetectCategory(string title)
@@ -207,7 +210,7 @@ namespace MovieBonanza
             }
         }
         /// <summary>
-        /// 
+        /// This method sets the cost and stores to array depending on the selected movie's category
         /// </summary>
         /// <param name="category"></param>
         private void DetectCost(string category)
@@ -242,5 +245,27 @@ namespace MovieBonanza
                     break;
             }
         }
+        //PUBLIC METHODS------------------------
+        /// <summary>
+        /// This method is getter to get string array including information of selected movie
+        /// </summary>
+        public string[] MovieInformation
+        {
+            get
+            {
+                return _movieInformation;
+            }
+        }
+        /// <summary>
+        /// This methods is getter to get bigger image than selection form's image
+        /// </summary>
+        public Image BigPictureImage
+        {
+            get
+            {
+                return _bigPictureImage;
+            }
+        }
+        
     }
 }

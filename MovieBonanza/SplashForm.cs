@@ -1,4 +1,12 @@
-﻿using System;
+﻿//FileName: SplashForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Created On: 28/02/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows the logo of Movie Bonanza.
+
+/////////////////////////////////////////////////////////////////////////
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +20,7 @@ namespace MovieBonanza
 {
     public partial class SplashForm : Form
     {
+        //CONSTRUCTORS------------------------
         public SplashForm()
         {
             InitializeComponent();
