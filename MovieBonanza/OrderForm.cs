@@ -1,6 +1,7 @@
 ﻿//FileName: OrderForm.cs
 //FileType: Visual C# Source file
 //Author: Junghwan Yang
+//Student ID: 200320739
 //Created On: 28/02/2017
 //Copy Rights: Junghwan Yang
 //Description: This app shows the information of selected movie including cost, image, category and title.
@@ -30,7 +31,7 @@ namespace MovieBonanza
         private double _salesTaxRatio = 0.13;
         private double _salesTax = 0;
         private double _grandTotal = 0;
-        private double DVDAdded = 0;
+        private double _costDVDAdded = 0;
 
         //CONSTRUCTORS-----------------------------
         public OrderForm()
@@ -82,15 +83,15 @@ namespace MovieBonanza
         {
             if(DVDCheckBox.Checked == true)
             {
-                DVDAdded = 10.00;
+                _costDVDAdded = 10.00;
                 DVDLabel.Visible = true;
                 DVDTextBox.Visible = true;
-                DVDTextBox.Text = "$" + string.Format("{0:#,##0.00}", DVDAdded);
+                DVDTextBox.Text = "$" + string.Format("{0:#,##0.00}", _costDVDAdded);
                 Initialize();
             }
             else
             {
-                DVDAdded = 0;
+                _costDVDAdded = 0;
                 DVDLabel.Visible = false;
                 DVDTextBox.Visible = false;
                 Initialize();
@@ -138,7 +139,7 @@ namespace MovieBonanza
             CategoryTextBox.Text = previousForm.MovieInformation[1];
             CostTextBox.Text = "$" + previousForm.MovieInformation[2];
             BigMoviePictureBox.Image = previousForm.BigPictureImage;
-            _subTotal = double.Parse(previousForm.MovieInformation[2]) + DVDAdded;
+            _subTotal = double.Parse(previousForm.MovieInformation[2]) + _costDVDAdded;
             _salesTax = _salesTaxRatio * _subTotal;
             _grandTotal = _subTotal + _salesTax;
             SubTotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", _subTotal);

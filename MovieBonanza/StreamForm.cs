@@ -1,6 +1,7 @@
 ﻿//FileName: StreamForm.cs
 //FileType: Visual C# Source file
 //Author: Junghwan Yang
+//Student ID: 200320739
 //Created On: 28/02/2017
 //Copy Rights: Junghwan Yang
 //Description: This app shows the information of selected movie including cost and title. Thank you massege.
