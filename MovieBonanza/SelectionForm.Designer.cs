@@ -40,8 +40,8 @@
             this.CostLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.SmallMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.SmallMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.SelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallMoviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             // SplashTimer
             // 
             this.SplashTimer.Enabled = true;
-            this.SplashTimer.Interval = 310;
+            this.SplashTimer.Interval = 3123;
             this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
             // SelectionsIntroductionLabel
@@ -182,15 +182,6 @@
             this.TitleLabel.TabIndex = 1;
             this.TitleLabel.Text = "Title";
             // 
-            // SmallMoviePictureBox
-            // 
-            this.SmallMoviePictureBox.Location = new System.Drawing.Point(7, 57);
-            this.SmallMoviePictureBox.Name = "SmallMoviePictureBox";
-            this.SmallMoviePictureBox.Size = new System.Drawing.Size(200, 202);
-            this.SmallMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SmallMoviePictureBox.TabIndex = 0;
-            this.SmallMoviePictureBox.TabStop = false;
-            // 
             // NextButton
             // 
             this.NextButton.Enabled = false;
@@ -202,6 +193,15 @@
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // SmallMoviePictureBox
+            // 
+            this.SmallMoviePictureBox.Location = new System.Drawing.Point(7, 57);
+            this.SmallMoviePictureBox.Name = "SmallMoviePictureBox";
+            this.SmallMoviePictureBox.Size = new System.Drawing.Size(200, 202);
+            this.SmallMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SmallMoviePictureBox.TabIndex = 0;
+            this.SmallMoviePictureBox.TabStop = false;
             // 
             // SelectionForm
             // 

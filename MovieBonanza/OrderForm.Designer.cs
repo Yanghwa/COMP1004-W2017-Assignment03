@@ -91,6 +91,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
@@ -106,6 +107,7 @@
             this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.cancelToolStripMenuItem.Text = "Canc&el";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -133,6 +135,7 @@
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // StreamButton
             // 
@@ -164,7 +167,7 @@
             // 
             this.CategoryTextBox.BackColor = System.Drawing.Color.White;
             this.CategoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryTextBox.Location = new System.Drawing.Point(20, 161);
+            this.CategoryTextBox.Location = new System.Drawing.Point(20, 136);
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.ReadOnly = true;
             this.CategoryTextBox.Size = new System.Drawing.Size(275, 30);
@@ -174,7 +177,7 @@
             // 
             this.TitleTextBox.BackColor = System.Drawing.Color.White;
             this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleTextBox.Location = new System.Drawing.Point(20, 72);
+            this.TitleTextBox.Location = new System.Drawing.Point(20, 63);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(275, 30);
@@ -184,7 +187,7 @@
             // 
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(15, 120);
+            this.CategoryLabel.Location = new System.Drawing.Point(15, 104);
             this.CategoryLabel.Name = "CategoryLabel";
             this.CategoryLabel.Size = new System.Drawing.Size(92, 25);
             this.CategoryLabel.TabIndex = 4;
@@ -225,23 +228,23 @@
             // 
             this.DVDTextBox.BackColor = System.Drawing.Color.White;
             this.DVDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DVDTextBox.Location = new System.Drawing.Point(226, 128);
+            this.DVDTextBox.Location = new System.Drawing.Point(226, 131);
             this.DVDTextBox.Name = "DVDTextBox";
             this.DVDTextBox.ReadOnly = true;
             this.DVDTextBox.Size = new System.Drawing.Size(100, 30);
             this.DVDTextBox.TabIndex = 10;
-            this.DVDTextBox.Text = "$ 10.00";
             this.DVDTextBox.Visible = false;
             // 
             // DVDLabel
             // 
             this.DVDLabel.AutoSize = true;
             this.DVDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DVDLabel.Location = new System.Drawing.Point(116, 128);
+            this.DVDLabel.Location = new System.Drawing.Point(116, 131);
             this.DVDLabel.Name = "DVDLabel";
             this.DVDLabel.Size = new System.Drawing.Size(54, 25);
             this.DVDLabel.TabIndex = 9;
             this.DVDLabel.Text = "DVD";
+            this.DVDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.DVDLabel.Visible = false;
             // 
             // DVDCheckBox
@@ -253,12 +256,13 @@
             this.DVDCheckBox.TabIndex = 8;
             this.DVDCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
             this.DVDCheckBox.UseVisualStyleBackColor = true;
+            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.DVDCheckBox_CheckedChanged);
             // 
             // GrandTotalTextBox
             // 
             this.GrandTotalTextBox.BackColor = System.Drawing.Color.White;
             this.GrandTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotalTextBox.Location = new System.Drawing.Point(226, 302);
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(226, 299);
             this.GrandTotalTextBox.Name = "GrandTotalTextBox";
             this.GrandTotalTextBox.ReadOnly = true;
             this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 30);
@@ -268,7 +272,7 @@
             // 
             this.SalesTaxTextBox.BackColor = System.Drawing.Color.White;
             this.SalesTaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(226, 248);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(226, 243);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 30);
@@ -278,7 +282,7 @@
             // 
             this.SubTotalTextBox.BackColor = System.Drawing.Color.White;
             this.SubTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTotalTextBox.Location = new System.Drawing.Point(226, 181);
+            this.SubTotalTextBox.Location = new System.Drawing.Point(226, 187);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
             this.SubTotalTextBox.ReadOnly = true;
             this.SubTotalTextBox.Size = new System.Drawing.Size(100, 30);
@@ -288,31 +292,34 @@
             // 
             this.GrandTotalLabel.AutoSize = true;
             this.GrandTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotalLabel.Location = new System.Drawing.Point(55, 302);
+            this.GrandTotalLabel.Location = new System.Drawing.Point(55, 299);
             this.GrandTotalLabel.Name = "GrandTotalLabel";
             this.GrandTotalLabel.Size = new System.Drawing.Size(115, 25);
             this.GrandTotalLabel.TabIndex = 6;
             this.GrandTotalLabel.Text = "Grand Total";
+            this.GrandTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SalesTaxLabel
             // 
             this.SalesTaxLabel.AutoSize = true;
             this.SalesTaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesTaxLabel.Location = new System.Drawing.Point(10, 248);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(10, 243);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(160, 25);
             this.SalesTaxLabel.TabIndex = 6;
             this.SalesTaxLabel.Text = "Sales Tax (13%)";
+            this.SalesTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SubTotalLabel
             // 
             this.SubTotalLabel.AutoSize = true;
             this.SubTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTotalLabel.Location = new System.Drawing.Point(78, 181);
+            this.SubTotalLabel.Location = new System.Drawing.Point(78, 187);
             this.SubTotalLabel.Name = "SubTotalLabel";
             this.SubTotalLabel.Size = new System.Drawing.Size(92, 25);
             this.SubTotalLabel.TabIndex = 6;
             this.SubTotalLabel.Text = "SubTotal";
+            this.SubTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CostTextBox
             // 
@@ -333,6 +340,7 @@
             this.CostLabel.Size = new System.Drawing.Size(53, 25);
             this.CostLabel.TabIndex = 4;
             this.CostLabel.Text = "Cost";
+            this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BackButton
             // 
@@ -347,9 +355,9 @@
             // 
             // BigMoviePictureBox
             // 
-            this.BigMoviePictureBox.Location = new System.Drawing.Point(20, 206);
+            this.BigMoviePictureBox.Location = new System.Drawing.Point(12, 172);
             this.BigMoviePictureBox.Name = "BigMoviePictureBox";
-            this.BigMoviePictureBox.Size = new System.Drawing.Size(275, 256);
+            this.BigMoviePictureBox.Size = new System.Drawing.Size(310, 290);
             this.BigMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigMoviePictureBox.TabIndex = 3;
             this.BigMoviePictureBox.TabStop = false;

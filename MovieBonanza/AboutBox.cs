@@ -1,4 +1,13 @@
-﻿using System;
+﻿//FileName: AboutBox.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Created On: 28/02/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows the information of the whole application briefly including student information.
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,6 +20,10 @@ namespace MovieBonanza
 {
     partial class AboutBox : Form
     {
+        //CONSTRUCTORS-------------
+        /// <summary>
+        /// This constructor make about box to show the application information and bring some infromation from assembly, and put student information
+        /// </summary>
         public AboutBox()
         {
             InitializeComponent();
@@ -18,8 +31,10 @@ namespace MovieBonanza
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+            this.labelStudentName.Text = "Junghwan Yang";
+            this.labelContactNumber.Text = "647-863-2590";
+            this.labelWebsite.Text = "http://www.junghwanyang.me";
         }
 
         #region Assembly Attribute Accessors
@@ -88,7 +103,7 @@ namespace MovieBonanza
             }
         }
 
-        public string AssemblyCompany
+        public string AssemblyStudent
         {
             get
             {
