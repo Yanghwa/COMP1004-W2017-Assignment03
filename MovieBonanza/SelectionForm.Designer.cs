@@ -193,6 +193,7 @@
             // 
             // NextButton
             // 
+            this.NextButton.Enabled = false;
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.NextButton.Location = new System.Drawing.Point(744, 482);
             this.NextButton.Name = "NextButton";

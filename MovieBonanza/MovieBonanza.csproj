@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="StreamForm.Designer.cs">
       <DependentUpon>StreamForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +142,126 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\thriller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Cedar-Rapids-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\CedarRapids-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\company-man-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\company-man-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Death_Race_2-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Death_Race_2-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Footloose-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Footloose-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\GnomeoandJuliet-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\GnomeoandJuliet-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\green_hornet_big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\green_hornet_small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\I_Am_Number_Four-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\I_Am_Number_Four-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Just_Go_with_It-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Just_Go_with_It-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Moves_TheOtherWoman-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Moves_TheOtherWoman-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\No_Strings_Attached-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\No_Strings_Attached-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Real_Steel-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Real_Steel-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\roommate-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\roommate-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Sanctum-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Sanctum-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\season_of_the_witch-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Season-of-the-Witch-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\The_Eagle-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\The_Eagle-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the_mechanic-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the_mechanic-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-dilemma-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-dilemma-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-rite-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-rite-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-way-back-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\the-way-back-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Waiting_for_Forever-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Waiting_for_Forever-small.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,7 +42,6 @@
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.BigMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
             this.DVDTextBox = new System.Windows.Forms.TextBox();
             this.DVDLabel = new System.Windows.Forms.Label();
@@ -56,10 +55,11 @@
             this.CostTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
+            this.BigMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BigMoviePictureBox)).BeginInit();
             this.YourOrderGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BigMoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,25 +81,30 @@
             this.streamToolStripMenuItem,
             this.cancelToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.streamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.streamToolStripMenuItem.Text = "Strea&m";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.cancelToolStripMenuItem.Text = "Canc&el";
             // 
             // helpToolStripMenuItem
@@ -107,14 +112,17 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 30);
+            this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // CancelButton
             // 
@@ -192,15 +200,6 @@
             this.TitleLabel.TabIndex = 5;
             this.TitleLabel.Text = "Title";
             // 
-            // BigMoviePictureBox
-            // 
-            this.BigMoviePictureBox.Location = new System.Drawing.Point(20, 206);
-            this.BigMoviePictureBox.Name = "BigMoviePictureBox";
-            this.BigMoviePictureBox.Size = new System.Drawing.Size(275, 256);
-            this.BigMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BigMoviePictureBox.TabIndex = 3;
-            this.BigMoviePictureBox.TabStop = false;
-            // 
             // YourOrderGroupBox
             // 
             this.YourOrderGroupBox.Controls.Add(this.DVDTextBox);
@@ -231,6 +230,7 @@
             this.DVDTextBox.ReadOnly = true;
             this.DVDTextBox.Size = new System.Drawing.Size(100, 30);
             this.DVDTextBox.TabIndex = 10;
+            this.DVDTextBox.Text = "$ 10.00";
             this.DVDTextBox.Visible = false;
             // 
             // DVDLabel
@@ -345,6 +345,15 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // BigMoviePictureBox
+            // 
+            this.BigMoviePictureBox.Location = new System.Drawing.Point(20, 206);
+            this.BigMoviePictureBox.Name = "BigMoviePictureBox";
+            this.BigMoviePictureBox.Size = new System.Drawing.Size(275, 256);
+            this.BigMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BigMoviePictureBox.TabIndex = 3;
+            this.BigMoviePictureBox.TabStop = false;
+            // 
             // OrderForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -367,9 +376,9 @@
             this.menuStrip1.PerformLayout();
             this.MovieSelectedGroupBox.ResumeLayout(false);
             this.MovieSelectedGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BigMoviePictureBox)).EndInit();
             this.YourOrderGroupBox.ResumeLayout(false);
             this.YourOrderGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BigMoviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
