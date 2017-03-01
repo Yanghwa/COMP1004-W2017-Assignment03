@@ -25,7 +25,7 @@ namespace MovieBonanza
         //INSTANCE CLASS-----------------
         SplashForm splash = new SplashForm();
         //PRIVATE INSTANCE VARIABLES-----------------
-        private string[] _movieInformation = new string[4];
+        private string[] _movieInformation = new string[3];
         private Image _bigPictureImage;
 
         //CONSTRUCTORS-------------------
