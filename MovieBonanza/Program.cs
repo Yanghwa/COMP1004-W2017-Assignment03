@@ -16,7 +16,7 @@ namespace MovieBonanza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplachScreenForm());
+            Application.Run(new SelectionForm());
         }
     }
 }

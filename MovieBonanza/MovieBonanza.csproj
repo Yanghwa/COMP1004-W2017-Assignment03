@@ -91,6 +91,9 @@
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StreamForm.resx">
+      <DependentUpon>StreamForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +109,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\action.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\comedy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\drama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\family.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\horror.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\new-release.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\sci-fi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\thriller.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

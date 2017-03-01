@@ -1,6 +1,6 @@
 ﻿namespace MovieBonanza
 {
-    partial class SplachScreenForm
+    partial class SelectionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             this.MovieListLabel = new System.Windows.Forms.Label();
             this.MovieListBox = new System.Windows.Forms.ListBox();
             this.SelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.CategoryLabel = new System.Windows.Forms.Label();
-            this.CostLabel = new System.Windows.Forms.Label();
-            this.TitleTextBox = new System.Windows.Forms.TextBox();
-            this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.CategoryLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.SmallMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
-            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.SelectionGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SmallMoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SplashTimer
             // 
             this.SplashTimer.Enabled = true;
-            this.SplashTimer.Interval = 3100;
+            this.SplashTimer.Interval = 310;
             this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
             // SelectionsIntroductionLabel
@@ -103,6 +103,7 @@
             this.MovieListBox.Size = new System.Drawing.Size(248, 420);
             this.MovieListBox.Sorted = true;
             this.MovieListBox.TabIndex = 2;
+            this.MovieListBox.SelectedIndexChanged += new System.EventHandler(this.MovieListBox_SelectedIndexChanged);
             // 
             // SelectionGroupBox
             // 
@@ -112,7 +113,7 @@
             this.SelectionGroupBox.Controls.Add(this.CostLabel);
             this.SelectionGroupBox.Controls.Add(this.CategoryLabel);
             this.SelectionGroupBox.Controls.Add(this.TitleLabel);
-            this.SelectionGroupBox.Controls.Add(this.MoviePictureBox);
+            this.SelectionGroupBox.Controls.Add(this.SmallMoviePictureBox);
             this.SelectionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectionGroupBox.Location = new System.Drawing.Point(308, 115);
             this.SelectionGroupBox.Name = "SelectionGroupBox";
@@ -121,45 +122,15 @@
             this.SelectionGroupBox.TabStop = false;
             this.SelectionGroupBox.Text = "Your Selection";
             // 
-            // TitleLabel
+            // CostTextBox
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(237, 57);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(49, 25);
-            this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Title";
-            // 
-            // CategoryLabel
-            // 
-            this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(237, 163);
-            this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(92, 25);
-            this.CategoryLabel.TabIndex = 1;
-            this.CategoryLabel.Text = "Category";
-            // 
-            // CostLabel
-            // 
-            this.CostLabel.AutoSize = true;
-            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostLabel.Location = new System.Drawing.Point(412, 163);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(53, 25);
-            this.CostLabel.TabIndex = 1;
-            this.CostLabel.Text = "Cost";
-            // 
-            // TitleTextBox
-            // 
-            this.TitleTextBox.BackColor = System.Drawing.Color.White;
-            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleTextBox.Location = new System.Drawing.Point(242, 96);
-            this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.ReadOnly = true;
-            this.TitleTextBox.Size = new System.Drawing.Size(275, 30);
-            this.TitleTextBox.TabIndex = 2;
+            this.CostTextBox.BackColor = System.Drawing.Color.White;
+            this.CostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostTextBox.Location = new System.Drawing.Point(417, 204);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(100, 30);
+            this.CostTextBox.TabIndex = 2;
             // 
             // CategoryTextBox
             // 
@@ -171,15 +142,54 @@
             this.CategoryTextBox.Size = new System.Drawing.Size(165, 30);
             this.CategoryTextBox.TabIndex = 2;
             // 
-            // CostTextBox
+            // TitleTextBox
             // 
-            this.CostTextBox.BackColor = System.Drawing.Color.White;
-            this.CostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostTextBox.Location = new System.Drawing.Point(417, 204);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.ReadOnly = true;
-            this.CostTextBox.Size = new System.Drawing.Size(100, 30);
-            this.CostTextBox.TabIndex = 2;
+            this.TitleTextBox.BackColor = System.Drawing.Color.White;
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleTextBox.Location = new System.Drawing.Point(242, 96);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(275, 30);
+            this.TitleTextBox.TabIndex = 2;
+            // 
+            // CostLabel
+            // 
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostLabel.Location = new System.Drawing.Point(412, 163);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(53, 25);
+            this.CostLabel.TabIndex = 1;
+            this.CostLabel.Text = "Cost";
+            // 
+            // CategoryLabel
+            // 
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Location = new System.Drawing.Point(237, 163);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(92, 25);
+            this.CategoryLabel.TabIndex = 1;
+            this.CategoryLabel.Text = "Category";
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(237, 57);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(49, 25);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Title";
+            // 
+            // SmallMoviePictureBox
+            // 
+            this.SmallMoviePictureBox.Location = new System.Drawing.Point(7, 57);
+            this.SmallMoviePictureBox.Name = "SmallMoviePictureBox";
+            this.SmallMoviePictureBox.Size = new System.Drawing.Size(200, 202);
+            this.SmallMoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SmallMoviePictureBox.TabIndex = 0;
+            this.SmallMoviePictureBox.TabStop = false;
             // 
             // NextButton
             // 
@@ -192,15 +202,7 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // MoviePictureBox
-            // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(7, 57);
-            this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(200, 202);
-            this.MoviePictureBox.TabIndex = 0;
-            this.MoviePictureBox.TabStop = false;
-            // 
-            // SplachScreenForm
+            // SelectionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(858, 544);
@@ -212,13 +214,13 @@
             this.Controls.Add(this.SelectionsIntroductionLabel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SplachScreenForm";
+            this.Name = "SelectionForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moving Bonanza - Your Online Streaming Service";
             this.SelectionGroupBox.ResumeLayout(false);
             this.SelectionGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SmallMoviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +236,7 @@
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.PictureBox MoviePictureBox;
+        internal System.Windows.Forms.PictureBox SmallMoviePictureBox;
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.TextBox TitleTextBox;
