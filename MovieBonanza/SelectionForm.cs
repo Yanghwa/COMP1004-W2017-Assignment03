@@ -71,7 +71,7 @@ namespace MovieBonanza
             {
                 OrderForm order = new OrderForm();
                 order.previousForm = this;
-                order.Initialize();
+                order.InitializeOrder();
                 this.Hide();
                 order.Show();
             }

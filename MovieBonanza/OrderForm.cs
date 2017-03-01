@@ -41,7 +41,7 @@ namespace MovieBonanza
 
         //EVENT HANDELER --------------------------------
         /// <summary>
-        /// This method shows the stream form when you click the stream button
+        /// This method shows the stream form when you click the stream button and menu-stream 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -87,24 +87,24 @@ namespace MovieBonanza
                 DVDLabel.Visible = true;
                 DVDTextBox.Visible = true;
                 DVDTextBox.Text = "$" + string.Format("{0:#,##0.00}", _costDVDAdded);
-                Initialize();
+                InitializeOrder();
             }
             else
             {
                 _costDVDAdded = 0;
                 DVDLabel.Visible = false;
                 DVDTextBox.Visible = false;
-                Initialize();
+                InitializeOrder();
             }
         }
         /// <summary>
-        /// This method closes the form when you click the cancel button
+        /// This method closes the form when you click the cancel button and menu-cancel button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ClickCancelButton(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         /// <summary>
         /// This method show the brief information via message box when you click the print menu on the menu
@@ -133,7 +133,7 @@ namespace MovieBonanza
         /// <summary>
         /// This method gets the data from selection form and shows on the form
         /// </summary>
-        public void Initialize()
+        public void InitializeOrder()
         {
             TitleTextBox.Text = previousForm.MovieInformation[0];
             CategoryTextBox.Text = previousForm.MovieInformation[1];
